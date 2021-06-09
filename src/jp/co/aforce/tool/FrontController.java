@@ -1,4 +1,4 @@
-package tool;
+package jp.co.aforce.tool;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,9 +17,9 @@ public class FrontController extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 			String path = request.getServletPath().substring(1);
-			String name = "jp.co.aforce" + path.replace(".a", "A").replace('/', '.');
+			String name = path.replace(".action", "Action").replace('/', '.');
 			Action action = (Action) Class.forName(name).getDeclaredConstructor().newInstance();
-			String url = "jsp/" + action.execute(request, response);
+			String url = action.execute(request, response);
 			request.getRequestDispatcher(url).forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace(out);

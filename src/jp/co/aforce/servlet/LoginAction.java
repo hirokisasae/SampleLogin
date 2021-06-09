@@ -1,4 +1,4 @@
-package jp.co.aforce;
+package jp.co.aforce.servlet;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,7 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import jp.co.aforce.DAO.LoginDAO;
 import jp.co.aforce.bean.Customer;
-import tool.Action;
+import jp.co.aforce.tool.Action;
 
 
 public class LoginAction extends Action {

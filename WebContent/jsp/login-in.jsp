@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@include file="../header.html"%>
     
-<form action="../Login.action" method="post">
+<form action="../jp.co.aforce.servlet/Login.action" method="post">
 <p>ID
 <input type="text" name="customer_id" required></p>
 <p>パスワード

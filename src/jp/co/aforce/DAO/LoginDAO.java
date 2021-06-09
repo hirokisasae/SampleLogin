@@ -15,7 +15,7 @@ public class LoginDAO extends DAO {
 
 		PreparedStatement st;
 		st = con.prepareStatement(
-				"select*from customer where coustomer_id=? and password=?");
+				"select*from customer where customer_id=? and password=?");
 		st.setString(1, customer_id);
 		st.setString(2, password);
 		ResultSet rs = st.executeQuery();
@@ -24,7 +24,7 @@ public class LoginDAO extends DAO {
 			customer = new Customer();
 
 			customer.setId(rs.getInt("id"));
-			customer.setCustomer_id(rs.getString("Customer_id"));
+			customer.setCustomer_id(rs.getString("customer_id"));
 			customer.setPassword(rs.getString("password"));
 		}
 

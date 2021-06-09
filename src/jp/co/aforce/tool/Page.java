@@ -1,4 +1,4 @@
-package tool;
+package jp.co.aforce.tool;
 
 import java.io.PrintWriter;
 
